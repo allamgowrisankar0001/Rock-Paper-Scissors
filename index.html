@@ -24,7 +24,7 @@
         }
 
         .main {
-            background: rgb(255, 255, 255);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(20px);
             border-radius: 24px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
@@ -45,7 +45,6 @@
             font-weight: 800;
             -webkit-text-fill-color: #000000;
             -webkit-text-stroke: 2px #ffffff;
-            
             /* background: linear-gradient(135deg, #667eea, #764ba2); */
          
     
@@ -238,10 +237,6 @@
         }
 
         @media (max-width: 768px) {
-            body{
-                margin: 10px;
-                padding: 0;
-                }
             .main {
                 padding: 30px 20px;
                 margin: 0;
@@ -250,17 +245,13 @@
                 border-radius: 0;
                 height: 100vh;
                 overflow: scroll;
-                
             }
             .main::-webkit-scrollbar{
                 display: none;
             }
-
             .game-title {
-                font-size: 2.0rem !important;
-                -webkit-text-stroke: 2px  rgb(255, 255, 255);
-                width: 350px;
-                -webkit-text-fill-color: #000000 !important;
+                font-size: 2rem;
+                
             }
 
             #result {
@@ -276,7 +267,7 @@
             button {
                 min-height: 70px;
                 font-size: 1rem;
-                width: 300px !important;
+                width: 320px !important;
             }
 
             .stats-grid {
@@ -291,6 +282,10 @@
                 max-width: 100vw;
                 border-radius: 0;
                 height: 100vh;
+                overflow: scroll;
+            }
+            .main::-webkit-scrollbar{
+                display: none;
             }
 
             .game-title {
@@ -385,7 +380,19 @@
             document.getElementById('games-display').textContent = gamesplayed;
         }
 
-        
+        // Add animation class based on result
+        function addResultAnimation(result) {
+            const resultElement = document.getElementById('result');
+            resultElement.classList.remove('win-animation', 'lose-animation', 'tie-animation');
+            
+            if (result === 'win') {
+                resultElement.classList.add('win-animation');
+            } else if (result === 'lose') {
+                resultElement.classList.add('lose-animation');
+            } else {
+                resultElement.classList.add('tie-animation');
+            }
+        }
 
         function rocks() {
             let botans = Math.floor((Math.random() * 3) + 1);
