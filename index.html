@@ -495,7 +495,10 @@
             document.getElementById('result').textContent = "Choose one";
             document.getElementById('description').textContent = "To Play";
         }
-
+        // Load stats when the page loads
+window.onload = function () {
+    loadStats();
+};
 
     </script>
 </body>
