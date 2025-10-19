@@ -394,19 +394,16 @@
                 document.getElementById('result').textContent = "It's a Tie!";
                 ties++;
                 document.getElementById('description').textContent = "You chose Rock, Computer chose Rock";
-                addResultAnimation('tie');
             } else if (botans == paper) {
                 gamesplayed++;
                 document.getElementById('result').textContent = "You Lose!";
                 losses++;
                 document.getElementById('description').textContent = "You chose Rock, Computer chose Paper";
-                addResultAnimation('lose');
             } else {
                 gamesplayed++;
                 document.getElementById('result').textContent = "You Win!";
                 wins++;
                 document.getElementById('description').textContent = "You chose Rock, Computer chose Scissors";
-                addResultAnimation('win');
             }
             localStorage.setItem('wins', wins);
             localStorage.setItem('losses', losses);
@@ -422,19 +419,16 @@
                 document.getElementById('result').textContent = "You Win!";
                 wins++;
                 document.getElementById('description').textContent = "You chose Paper, Computer chose Rock";
-                addResultAnimation('win');
             } else if (botans == paper) {
                 gamesplayed++;
                 document.getElementById('result').textContent = "It's a Tie!";
                 ties++;
                 document.getElementById('description').textContent = "You chose Paper, Computer chose Paper";
-                addResultAnimation('tie');
             } else {
                 gamesplayed++;
                 document.getElementById('result').textContent = "You Lose!";
                 losses++;
                 document.getElementById('description').textContent = "You chose Paper, Computer chose Scissors";
-                addResultAnimation('lose');
             }
             localStorage.setItem('wins', wins);
             localStorage.setItem('losses', losses);
@@ -450,19 +444,16 @@
                 document.getElementById('result').textContent = "You Win!";
                 wins++;
                 document.getElementById('description').textContent = "You chose Scissors, Computer chose Paper";
-                addResultAnimation('win');
             } else if (botans == scissors) {
                 gamesplayed++;
                 document.getElementById('result').textContent = "It's a Tie!";
                 ties++;
                 document.getElementById('description').textContent = "You chose Scissors, Computer chose Scissors";
-                addResultAnimation('tie');
             } else {
                 gamesplayed++;
                 document.getElementById('result').textContent = "You Lose!";
                 losses++;
                 document.getElementById('description').textContent = "You chose Scissors, Computer chose Rock";
-                addResultAnimation('lose');
             }
             localStorage.setItem('wins', wins);
             localStorage.setItem('losses', losses);
